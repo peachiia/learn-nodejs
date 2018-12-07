@@ -6,6 +6,12 @@ My Sandbox for learning NodeJS.
 
 1. Node use V8 Enging from Google which used in Google Chrome and written by C++.
 
+2. use `console.log('');` to print to console.
+
+3. from 811cdd94dfb7b8c28022af43b52f172fab3c337e, all object that have var will be GLOBAL, which mean that it can called from anywhere within the same node application.
+
+4. `__dirname` and `__filename` is one of the DEFAULT GLOBAL Object that we can use.
+
 ## Developing Note
 
 ### to run once
