@@ -16,6 +16,10 @@ My Sandbox for learning NodeJS.
 
 6. `Module` has been used for seperating each part of the software. (like a namespace)
 
+7. `events` module can be used for emitting,raising function using `key`. (*eventKey* in fed6c2d9dd8890943621d61c144c89b0a611ce5f)
+
+8. `util.inherits` from `util` module can used in the same way as *extends in java*. **Note: On ES2015(ES6), `extends` is recommeded to be used instead. And `events.EventEmitter` MUST be replaced by `events` in Node 7.8.*.**
+
 ## Developing Note
 
 ### to run once
