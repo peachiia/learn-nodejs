@@ -1,36 +1,18 @@
-var events = require('events');
-
-// Normal
-/*
-var util = require('util');
-
-var Person = function(name) {
-    this.name = name; // assign name to storage in Person Object
-}
-
-util.inherits(Person, events.EventEmitter);
-*/
-
-// ES2015 (ES6) Class Style
-class Person extends events.EventEmitter{
-    constructor(name) {
-        super();
-        this.name = name; // assign name to storage in Person Object
-    }
-}
+var fs = require('fs');
 
 
+// Sync
+var file = fs.readFileSync('read.txt', 'utf8');
+console.log(file)
 
-var alice = new Person('alice');
-var bella = new Person('bella');
-var cindy = new Person('cindy');
+fs.writeFileSync('write.txt', file);
+console.log('Write Done!')
 
-var person_list = [alice, bella, cindy]
 
-person_list.forEach(function(obj) {
-    obj.on('speak', function(msg) {
-        console.log(obj.name + ' said: '+ msg);
-    });
+// Async
+var file = fs.readFile('read.txt', 'utf8', function(err, data) {
+    console.log(data)
+
+    fs.writeFileSync('write.txt', data);
+    console.log('Write Done!');
 });
-
-alice.emit('speak', 'Heyyy~!!')

@@ -20,6 +20,8 @@ My Sandbox for learning NodeJS.
 
 8. `util.inherits` from `util` module can used in the same way as *extends in java*. **Note: On ES2015(ES6), `extends` is recommeded to be used instead. And `events.EventEmitter` MUST be replaced by `events` in Node 7.8.*.**
 
+9. `fs.readFileSync()` and `fs.writeFileSync()` are *blocking functions* for reading/writing a file. `fs.readFile()` and `fs.writeFile()` are *NON blocking functions*.  
+
 ## Developing Note
 
 ### to run once
