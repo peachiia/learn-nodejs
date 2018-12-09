@@ -75,9 +75,9 @@ To continuously restart node script after each saving. `nodemon` has been used.
 
 * `http.createServer` on `http` module is for server creation. Its callback function can get `request` and `response` object as a parameter. (on 3a4fbcb)
 
-* from
-
 * `request` is containing *request header + request data*. 
 
 * `response` is containing *response header + response data*. 
   * `response header` should contain **Content-Type** and **Status**.
+
+* from 3a4fbcb, request might occur 2 times because the function is called on every kind of request. And if using inspector in Chrome, you'll see that the web browser request for `http://127.0.0.1:3000/` and `http://127.0.0.1:3000/favicon.ico` and that's why.
