@@ -22,6 +22,12 @@ My Sandbox for learning NodeJS.
 
 9. `fs.readFileSync()` and `fs.writeFileSync()` are *blocking functions* for reading/writing a file. `fs.readFile()` and `fs.writeFile()` are *NON blocking functions*.  
 
+10. `fs.unlinkSync` is for *file deletion*. Error might occur if file already deleted.
+
+11. `fs.mkdirSync` id for *Make Directory*. Error might occur if folder already existed. (Error: EEXIST: file already exists)
+
+12. `fs.mkdir` is *NON blocking* and *Error: EEXIST* will NOT occur even the folder is already exist.
+
 ## Developing Note
 
 ### to run once
