@@ -2,32 +2,6 @@
 
 My Sandbox for learning NodeJS.
 
-## Brief Lecture
-
-1. Node use V8 Enging from Google which used in Google Chrome and written by C++.
-
-2. use `console.log('');` to print to console.
-
-3. from 811cdd94dfb7b8c28022af43b52f172fab3c337e, all object that have var will be GLOBAL, which mean that it can called from anywhere within the same node application.
-
-4. `__dirname` and `__filename` is one of the DEFAULT GLOBAL Object that we can use.
-
-5. function can be called by passing as a function's parameter using function expression.
-
-6. `Module` has been used for seperating each part of the software. (like a namespace)
-
-7. `events` module can be used for emitting,raising function using `key`. (*eventKey* in fed6c2d9dd8890943621d61c144c89b0a611ce5f)
-
-8. `util.inherits` from `util` module can used in the same way as *extends in java*. **Note: On ES2015(ES6), `extends` is recommeded to be used instead. And `events.EventEmitter` MUST be replaced by `events` in Node 7.8.*.**
-
-9. `fs.readFileSync()` and `fs.writeFileSync()` are *blocking functions* for reading/writing a file. `fs.readFile()` and `fs.writeFile()` are *NON blocking functions*.  
-
-10. `fs.unlinkSync` is for *file deletion*. Error might occur if file already deleted.
-
-11. `fs.mkdirSync` id for *Make Directory*. Error might occur if folder already existed. (Error: EEXIST: file already exists)
-
-12. `fs.mkdir` is *NON blocking* and *Error: EEXIST* will NOT occur even the folder is already exist.
-
 ## Developing Note
 
 ### to run once
@@ -62,3 +36,48 @@ To continuously restart node script after each saving. `nodemon` has been used.
 ## References
 
 * [Node JS Tutorial for Beginners](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp) (Last Accesses: 8 December 2018, 01:53 GMT+7)
+
+## Brief Lecture
+
+### Did you know
+
+* Node use V8 Enging from Google which used in Google Chrome and written by C++.
+
+### Basic Operation
+
+* use `console.log('');` to print to console.
+
+* from 811cdd9, all object that have var will be GLOBAL, which mean that it can called from anywhere within the same node application.
+
+* `__dirname` and `__filename` is one of the DEFAULT GLOBAL Object that we can use.
+
+* function can be called by passing as a function's parameter using function expression.
+
+* `Module` has been used for seperating each part of the software. (like a namespace)
+
+* `events` module can be used for emitting,raising function using `key`. (*eventKey* in fed6c2d)
+
+* `util.inherits` from `util` module can used in the same way as *extends in java*. **Note: On ES2015(ES6), `extends` is recommeded to be used instead. And `events.EventEmitter` MUST be replaced by `events` in Node 7.8.*.**
+
+* `fs.readFileSync()` and `fs.writeFileSync()` are *blocking functions* for reading/writing a file. `fs.readFile()` and `fs.writeFile()` are *NON blocking functions*.  
+
+* `fs.unlinkSync` is for *file deletion*. Error might occur if file already deleted.
+
+* `fs.mkdirSync` id for *Make Directory*. Error might occur if folder already existed. (Error: EEXIST: file already exists)
+
+* `fs.mkdir` is *NON blocking* and *Error: EEXIST* will NOT occur even the folder is already exist.
+
+### Servers
+
+* **protocols** is a set of communication rules, that two sides agree to use when communicating.
+
+* **socket** is a tunnel that **packets** can travel between client and server. To create a tunnel, **Server have to listen on a port**. Then, **Client have to cearte a socket using IP Address and Port number**.
+
+* `http.createServer` on `http` module is for server creation. Its callback function can get `request` and `response` object as a parameter. (on 3a4fbcb)
+
+* from
+
+* `request` is containing *request header + request data*. 
+
+* `response` is containing *response header + response data*. 
+  * `response header` should contain **Content-Type** and **Status**.
