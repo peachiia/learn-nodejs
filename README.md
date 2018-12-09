@@ -14,6 +14,8 @@ My Sandbox for learning NodeJS.
 
 5. function can be called by passing as a function's parameter using function expression.
 
+6. `Module` has been used for seperating each part of the software. (like a namespace)
+
 ## Developing Note
 
 ### to run once
