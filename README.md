@@ -12,6 +12,8 @@ My Sandbox for learning NodeJS.
 
 4. `__dirname` and `__filename` is one of the DEFAULT GLOBAL Object that we can use.
 
+5. function can be called by passing as a function's parameter using function expression.
+
 ## Developing Note
 
 ### to run once

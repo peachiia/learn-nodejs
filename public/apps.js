@@ -1,8 +1,19 @@
-console.log('Hi!')
-console.log('waiting timeout for 3 seconds...')
+// normal function
+function sayHi() {
+    console.log('hi');
+}
 
-var interval = 3000;
+// function expression
+var sayBye = function() {
+    console.log('bye');
+} 
 
-var timer = setTimeout(function(){
-    console.log('Done!');
-}, interval);
+// function that call function
+function callFunction(func) {
+    func();
+}
+
+sayHi();
+callFunction(sayHi)
+sayBye();
+callFunction(sayBye);
