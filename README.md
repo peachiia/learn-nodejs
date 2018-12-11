@@ -81,3 +81,7 @@ To continuously restart node script after each saving. `nodemon` has been used.
   * `response header` should contain **Content-Type** and **Status**.
 
 * from 3a4fbcb, request might occur 2 times because the function is called on every kind of request. And if using inspector in Chrome, you'll see that the web browser request for `http://127.0.0.1:3000/` and `http://127.0.0.1:3000/favicon.ico` and that's why.
+
+* `Stream` can be used for *buffering data* and *asynchronously read and write*. 
+  * `Readable/Writable stream` is allow node js to read/write data to/from stream.
+  * `Duplex` can read/write data to stream.
